@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Edu_VIC_WA_NT_Beginner, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const inter = Edu_VIC_WA_NT_Beginner({ subsets: ["latin"] , weight: "500"});
 
@@ -40,7 +42,9 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
+        <Navbar/>
         {children}
+        <Footer/>
       </ThemeProvider>
     </body>
   </html>
