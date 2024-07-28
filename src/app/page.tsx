@@ -1,4 +1,5 @@
 import { MaxWidthWrapper } from "@/components/max-width-wrapper"
+import { Partners } from "@/components/partners"
 import { Button, buttonVariants } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
@@ -16,12 +17,17 @@ export default function Home() {
                     Bem-vindo ao EventExperience
                   </h1>
                   <p className="text-base md:text-lg">
-                    Organizamos seus eventos e transformamos em experiências inesquecíveis
+                    Organizamos seus eventos e transformamos em experiências
+                    inesquecíveis
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 sm:flex-row">
-                  <Button size="lg" asChild className="button w-full sm:w-fit">
-                    <Link href="/create-event">Crie Eventos</Link>
+                  <Button
+                    size="lg"
+                    asChild
+                    className="button bg-[#E67E22] dark:bg-[#E67E22] w-full sm:w-fit"
+                  >
+                    <Link href="/events">Crie Eventos</Link>
                   </Button>
                 </div>
               </div>
@@ -37,6 +43,11 @@ export default function Home() {
               </div>
             </div>
           </aside>
+        </section>
+      </MaxWidthWrapper>
+      <MaxWidthWrapper>
+        <section>
+          <Partners />
         </section>
       </MaxWidthWrapper>
     </main>
