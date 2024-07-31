@@ -22,10 +22,10 @@ export default function NavLink() {
     <nav className="">
       <div className="max-w-7xl mx-auto py-4 px-6 flex items-center justify-between">
         <Link href="/">
-          <h1 className={`text-2xl font-bold ${isActive('/') ? 'text-[#2ECC71]' : ''}`}>EventExperience</h1>
+          <h1 className={`text-2xl font-bold ${isActive('/') ? 'text-[#E67E22]' : ''}`}>EventExperience</h1>
         </Link>
         <div className="hidden lg:flex lg:items-center lg:space-x-6">
-          <Link href="/events" className={`font-medium text-xl ${isActive('/events') ? 'text-[#2ECC71]' : ''}`}>
+          <Link href="/events" className={`font-medium text-xl ${isActive('/events') ? 'text-[#E67E22]' : ''}`}>
             Eventos
           </Link>
           <div className="flex items-center">
@@ -56,7 +56,7 @@ export default function NavLink() {
                 <SheetDescription className="">
                   <div className="pb-3">
                     <Link href="/">
-                      <h1 className={`text-2xl text-left font-bold ${isActive('/') ? 'text-[#2ECC71]' : ''}`}>
+                      <h1 className={`text-2xl text-left font-bold ${isActive('/') ? 'text-[#E67E22]' : ''}`}>
                         EventExperience
                       </h1>
                     </Link>
@@ -65,7 +65,7 @@ export default function NavLink() {
                   <div className="ml-4 flex flex-col justify-start items-start m-3 lg:ml-6">
                     <Link
                       href="/events"
-                      className={`buttonVariants({variant:"ghost"}) text-xl font-bold ${isActive('/events') ? 'text-[#2ECC71]' : ''}`}
+                      className={`buttonVariants({variant:"ghost"}) text-xl font-bold ${isActive('/events') ? 'text-[#E67E22]' : ''}`}
                     >
                       Eventos
                     </Link>

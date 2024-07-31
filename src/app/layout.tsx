@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     siteName: "EventExperience",
     images: ["/event1.png"],
   },
+  
 }
 
 export default function RootLayout({

@@ -1,3 +1,5 @@
+import CategoryFilter from "@/components/CategoryFilter"
+import SearchInput from "@/components/SearchInput"
 import { MaxWidthWrapper } from "@/components/max-width-wrapper"
 import { Partners } from "@/components/partners"
 import { Button, buttonVariants } from "@/components/ui/button"
@@ -49,6 +51,27 @@ export default function Home() {
         <section>
           <Partners />
         </section>
+      </MaxWidthWrapper>
+      <MaxWidthWrapper>
+        <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold">Eventos</h1>
+          </div>
+          <div className="w-full flex justify-center">
+            <div className="w-[50px] h-[2px] bg-gray-800 mt-4" />
+          </div>
+
+          <div className="flex justify-between p-5 items-center mb-8 space-x-4">
+            <SearchInput />
+            <CategoryFilter />
+          </div>
+
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
+      {formatedProducts.map((product: Product) => (
+        <CardProduct key={product.id} product={product} />
+      ))}
+    </div> */}
+        </div>
       </MaxWidthWrapper>
     </main>
   )
