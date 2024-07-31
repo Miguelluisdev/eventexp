@@ -1,7 +1,7 @@
 import { usePathname } from 'next/navigation'
 import { Separator } from "@/components/ui/separator"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
-import { Logs } from "lucide-react"
+import Image from "next/image";
 import Link from "next/link"
 import { ModeToggle } from "./mode-toggle"
 import { Button } from "./ui/button"
@@ -48,7 +48,7 @@ export default function NavLink() {
           <Sheet>
             <SheetTrigger>
               <span className="cursor-pointer">
-                <Logs />
+                <Image src="/menu-bar.png" width={30} height={30} alt='menu icon'  />
               </span>
             </SheetTrigger>
             <SheetContent className="border-none">
