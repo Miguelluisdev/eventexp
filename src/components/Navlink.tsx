@@ -86,7 +86,7 @@ export default function NavLink() {
               </SignInButton>
             </SignedOut>
             <SignedIn>
-              <UserButton showName defaultOpen />
+              <UserButton showName />
             </SignedIn>
           </div>
         </div>
