@@ -29,7 +29,7 @@ export default function Home() {
                     asChild
                     className="button bg-[#E67E22] dark:bg-[#E67E22] w-full sm:w-fit"
                   >
-                    <Link href="/events">Crie Eventos</Link>
+                    <Link href="/events/create">Crie Eventos</Link>
                   </Button>
                 </div>
               </div>

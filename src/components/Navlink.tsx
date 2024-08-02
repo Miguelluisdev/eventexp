@@ -1,8 +1,8 @@
-import { usePathname } from 'next/navigation'
 import { Separator } from "@/components/ui/separator"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
-import Image from "next/image";
+import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { ModeToggle } from "./mode-toggle"
 import { Button } from "./ui/button"
 import {
@@ -22,11 +22,22 @@ export default function NavLink() {
     <nav className="">
       <div className="max-w-7xl mx-auto py-4 px-6 flex items-center justify-around">
         <Link href="/">
-          <h1 className={`text-2xl font-bold ${isActive('/') ? 'text-[#F2CB05]' : ''}`}>EventExperience</h1>
+          <h1
+            className={`text-2xl font-bold ${
+              isActive("/") ? "text-[#F2CB05]" : ""
+            }`}
+          >
+            EventExperience
+          </h1>
         </Link>
         <div className="hidden lg:flex lg:items-center lg:space-x-6">
-          <Link href="/events" className={`font-medium text-xl ${isActive('/events') ? 'text-[#F2CB05]' : ''}`}>
-            Eventos
+          <Link
+            href="/events/create"
+            className={`font-medium text-xl ${
+              isActive("/events/create") ? "text-[#F2CB05]" : ""
+            }`}
+          >
+            Criar evento
           </Link>
           <div className="flex items-center">
             <SignedOut>
@@ -37,7 +48,7 @@ export default function NavLink() {
               </SignInButton>
             </SignedOut>
             <SignedIn>
-              <UserButton  defaultOpen />
+              <UserButton defaultOpen />
             </SignedIn>
           </div>
           <span>
@@ -48,7 +59,12 @@ export default function NavLink() {
           <Sheet>
             <SheetTrigger>
               <span className="cursor-pointer">
-                <Image src="/menu-bar.png" width={30} height={30} alt='menu icon'  />
+                <Image
+                  src="/menu-bar.png"
+                  width={30}
+                  height={30}
+                  alt="menu icon"
+                />
               </span>
             </SheetTrigger>
             <SheetContent className="border-none">
@@ -56,18 +72,24 @@ export default function NavLink() {
                 <SheetDescription className="">
                   <div className="pb-3">
                     <Link href="/">
-                      <h1 className={`text-2xl text-left font-bold ${isActive('/') ? 'text-[#F2CB05]' : ''}`}>
+                      <h1
+                        className={`text-2xl text-left font-bold ${
+                          isActive("/") ? "text-[#F2CB05]" : ""
+                        }`}
+                      >
                         EventExperience
                       </h1>
                     </Link>
                   </div>
-                  <Separator className='bg-[#333333]'  />
+                  <Separator className="bg-[#333333]" />
                   <div className="ml-4 flex flex-col justify-start items-start m-3 lg:ml-6">
                     <Link
-                      href="/events"
-                      className={`buttonVariants({variant:"ghost"}) text-xl font-bold ${isActive('/events') ? 'text-[#F2CB05]' : ''}`}
+                      href="/events/create"
+                      className={`buttonVariants({variant:"ghost"}) text-xl font-bold ${
+                        isActive("/events/create") ? "text-[#F2CB05]" : ""
+                      }`}
                     >
-                      Eventos
+                      Criar evento
                     </Link>
                     <span className="m-3">
                       <ModeToggle />
