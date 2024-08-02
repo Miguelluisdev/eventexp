@@ -20,24 +20,24 @@ export default function NavLink() {
 
   return (
     <nav className="">
-      <div className="max-w-7xl mx-auto py-4 px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto py-4 px-6 flex items-center justify-around">
         <Link href="/">
-          <h1 className={`text-2xl font-bold ${isActive('/') ? 'text-[#E67E22]' : ''}`}>EventExperience</h1>
+          <h1 className={`text-2xl font-bold ${isActive('/') ? 'text-[#F2CB05]' : ''}`}>EventExperience</h1>
         </Link>
         <div className="hidden lg:flex lg:items-center lg:space-x-6">
-          <Link href="/events" className={`font-medium text-xl ${isActive('/events') ? 'text-[#E67E22]' : ''}`}>
+          <Link href="/events" className={`font-medium text-xl ${isActive('/events') ? 'text-[#F2CB05]' : ''}`}>
             Eventos
           </Link>
           <div className="flex items-center">
             <SignedOut>
               <SignInButton mode="modal">
-                <Button className="text-md font-medium bg-[#E67E22] dark:bg-[#E67E22]">
+                <Button className="text-md font-medium bg-[#F2CB05] dark:bg-[#F2CB05]">
                   Login
                 </Button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
-              <UserButton showName defaultOpen />
+              <UserButton  defaultOpen />
             </SignedIn>
           </div>
           <span>
@@ -56,7 +56,7 @@ export default function NavLink() {
                 <SheetDescription className="">
                   <div className="pb-3">
                     <Link href="/">
-                      <h1 className={`text-2xl text-left font-bold ${isActive('/') ? 'text-[#E67E22]' : ''}`}>
+                      <h1 className={`text-2xl text-left font-bold ${isActive('/') ? 'text-[#F2CB05]' : ''}`}>
                         EventExperience
                       </h1>
                     </Link>
@@ -65,7 +65,7 @@ export default function NavLink() {
                   <div className="ml-4 flex flex-col justify-start items-start m-3 lg:ml-6">
                     <Link
                       href="/events"
-                      className={`buttonVariants({variant:"ghost"}) text-xl font-bold ${isActive('/events') ? 'text-[#E67E22]' : ''}`}
+                      className={`buttonVariants({variant:"ghost"}) text-xl font-bold ${isActive('/events') ? 'text-[#F2CB05]' : ''}`}
                     >
                       Eventos
                     </Link>
@@ -80,13 +80,13 @@ export default function NavLink() {
           <div className="flex items-center px-5">
             <SignedOut>
               <SignInButton mode="modal">
-                <Button className="text-md font-medium bg-[#E67E22] dark:bg-[#E67E22]">
+                <Button className="text-md font-medium bg-[#F2CB05]] dark:bg-#F2CB05]]">
                   Login
                 </Button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
-              <UserButton showName />
+              <UserButton />
             </SignedIn>
           </div>
         </div>

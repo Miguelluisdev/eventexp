@@ -20,7 +20,7 @@ export default function CategoryFilter() {
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-32">
+      <DropdownMenuContent className="w-32  ">
         <DropdownMenuLabel>Filtrar por:</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup>

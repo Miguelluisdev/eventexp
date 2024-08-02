@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6 sm:p-8 md:p-10 lg:p-20">
+    <main className="flex min-h-screen mt-5 flex-col items-center justify-between p-6 sm:p-8 md:p-10 lg:p-20">
       <MaxWidthWrapper>
         <section className="w-full sm:pt-8">
           <aside className="container px-4 md:px-6">
@@ -53,7 +53,7 @@ export default function Home() {
         </section>
       </MaxWidthWrapper>
       <MaxWidthWrapper>
-        <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
+        <section className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
           <div className="text-center">
             <h1 className="text-3xl font-bold">Eventos</h1>
           </div>
@@ -61,7 +61,7 @@ export default function Home() {
             <div className="w-[50px] h-[2px] bg-gray-800 mt-4" />
           </div>
 
-          <div className="flex justify-between p-5 items-center mb-8 space-x-4">
+          <div className="flex flex-col md:flex-row justify-between p-5 items-center mb-8 space-y-4 md:space-y-0 md:space-x-4">
             <SearchInput />
             <CategoryFilter />
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
         <CardProduct key={product.id} product={product} />
       ))}
     </div> */}
-        </div>
+        </section>
       </MaxWidthWrapper>
     </main>
   )
