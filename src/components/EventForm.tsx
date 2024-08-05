@@ -1,4 +1,5 @@
 "use client"
+import { eventDefaultValues } from "@/@types"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -10,16 +11,11 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { EventSchema, onHandleSubmit } from "@/lib/validator"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { MaxWidthWrapper } from "./max-width-wrapper"
-
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-})
+import Dropdown from "./Dropdown"
 
 type EventFormProps = {
   userId: string
@@ -27,38 +23,61 @@ type EventFormProps = {
 }
 
 const EventForm = ({ userId, type }: EventFormProps) => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "",
-    },
-  })
+  const EventDefaultValues = eventDefaultValues
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
-  }
+  const form = useForm<z.infer<typeof EventSchema>>({
+    resolver: zodResolver(EventSchema),
+    defaultValues: EventDefaultValues,
+  })
 
   return (
     <section>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit">Submit</Button>
+        <form
+          onSubmit={form.handleSubmit(onHandleSubmit)}
+          className="flex flex-col gap-5"
+        >
+          <section className="flex flex-col md:flex-row gap-5">
+            <FormField
+              control={form.control}
+              name="title"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormLabel className="text-[20px] font-normal leading-[30px] tracking-[2%];">
+                    Titulo do evento
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Digite o titulo"
+                      {...field}
+                      className="h-10 text-[20px] font-normal leading-[30px] tracking-[2%]; focus-visible:ring-offset-0 placeholder:text-black px-4 border focus-visible:ring-transparent"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="categoryId"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormLabel className="text-[20px] font-normal leading-[30px] tracking-[2%];">
+                    Categoria
+                  </FormLabel>
+                  <FormControl>
+                    <Dropdown
+                      onChangeHandler={field.onChange}
+                      value={field.value}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </section>
+
+          <Button type="submit">Enviar</Button>
         </form>
       </Form>
     </section>
