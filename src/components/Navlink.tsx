@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
+import { Logs } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -59,12 +60,7 @@ export default function NavLink() {
           <Sheet>
             <SheetTrigger>
               <span className="cursor-pointer">
-                <Image
-                  src="/menu-bar.png"
-                  width={30}
-                  height={30}
-                  alt="menu icon"
-                />
+                <Logs />
               </span>
             </SheetTrigger>
             <SheetContent className="border-none">
@@ -91,9 +87,6 @@ export default function NavLink() {
                     >
                       Criar evento
                     </Link>
-                    <span className="m-3">
-                      <ModeToggle />
-                    </span>
                   </div>
                 </SheetDescription>
               </SheetHeader>
@@ -110,6 +103,9 @@ export default function NavLink() {
             <SignedIn>
               <UserButton />
             </SignedIn>
+            <span className="">
+              <ModeToggle />
+            </span>
           </div>
         </div>
       </div>
