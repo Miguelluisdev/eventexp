@@ -1,7 +1,7 @@
 # EventExperience(EM DESENVOLVIMENTO)
 
 ## Descrição do Projeto
-EventExperience é uma aplicação web para gerenciamento de eventos, construída utilizando tecnologias modernas para oferecer uma experiência de usuário rica e intuitiva. A plataforma permite a criação, gerenciamento e participação em eventos, com funcionalidades de autenticação, busca, filtragem, categorias, checkout e pagamentos não possui muito foco na estilização , pois o foco é na implementação das funcionalidades requeridas.
+EventExperience é uma aplicação web para gerenciamento de eventos, construída utilizando tecnologias modernas para oferecer uma experiência de usuário rica e intuitiva. A plataforma permite a criação, gerenciamento e participação em eventos, com funcionalidades de autenticação, busca, filtragem, categorias, checkout e pagamentos não possui muito foco na estilização , pois o foco é na implementação das funcionalidades requeridas , ao fim do projeto pretendo aplicar metodologias como principios solid e design paterns para melhorar a visibilidade do codigo.
 
 ## Tecnologias Utilizadas
 - **Next.js 14:** Framework React para produção, com suporte a renderização híbrida estática e dinâmica, roteamento inteligente e muito mais.
