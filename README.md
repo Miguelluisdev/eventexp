@@ -16,13 +16,7 @@ EventExperience é uma aplicação web para gerenciamento de eventos, construíd
 - **Stripe:** Plataforma de pagamentos online.
 
 ## Funcionalidades
-- **Autenticação:** Sistema de login e registro de usuários utilizando Clerk.
-- **Gerenciamento de Eventos:** Criação, edição e exclusão de eventos.
-- **Busca:** Sistema de busca para encontrar eventos específicos.
-- **Filtragem:** Filtragem de eventos por categoria, data, localização, etc.
-- **Categorias:** Organização de eventos por categorias.
-- **Checkout:** Processo de finalização de compra de ingressos.
-- **Pagamentos:** Integração com Stripe para processamento de pagamentos.
+ao fim do projeto serão preenchidas
 
 ## Como Executar o Projeto
 
